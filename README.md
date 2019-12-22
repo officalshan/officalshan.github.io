@@ -14,7 +14,7 @@
 		<div class="content">
 			<h2>Loikaw City Guide Application</h2>
 			<div class="buttons">
-				<a class="button apple" href="#">Download via Google Drive</a>
+				<a class="button google" href="#">Download via Google Drive</a>
 			
 			</div>
 		</div>
