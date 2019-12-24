@@ -121,15 +121,15 @@ body {
 }
 .wrapper .header .content .button.apple {
   background-image: url("https://loikawcityguide.github.io/images/logo.png");
-  background-size: 70px auto;
+  background-size: 10px auto;
   background-repeat: no-repeat;
-  background-position: 70px center;
+  background-position: 10px center;
 }
 .wrapper .header .content .button.google {
   background-image: url("https://firebasestorage.googleapis.com/v0/b/drive-assets.google.com.a.appspot.com/o/Asset%20-%20Drive%20Icon512.png?alt=media");
-  background-size: 70px auto;
+  background-size: 10px auto;
   background-repeat: no-repeat;
-  background-position: 70px center;
+  background-position: 10px center;
 }
 .wrapper .header .waves {
   width: calc(100% + 10px);
