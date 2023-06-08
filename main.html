@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTML with Inline CSS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: black;
+      overflow: hidden;
+    }
+    
+    h1 {
+      color: white;
+      font-size: 24px;
+      text-align: center;
+    }
+    
+    .description {
+      color: white;
+      font-size: 16px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    
+    nav ul li {
+      --c: goldenrod;
+      color: var(--c);
+      font-size: 16px;
+      border: 0.3em solid var(--c);
+      border-radius: 0.5em;
+      width: 12em;
+      height: 3em;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-family: sans-serif;
+      letter-spacing: 0.1em;
+      text-align: center;
+      line-height: 3em;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      transition: 0.5s;
+      margin: 1em;
+    }
+    
+    nav ul li span {
+      position: absolute;
+      width: 25%;
+      height: 100%;
+      background-color: var(--c);
+      transform: translateY(150%);
+      border-radius: 50%;
+      left: calc((var(--n) - 1) * 25%);
+      transition: 0.5s;
+      transition-delay: calc((var(--n) - 1) * 0.1s);
+      z-index: -1;
+    }
+    
+    nav ul li:hover {
+      color: black;
+    }
+    
+    nav ul li:hover span {
+      transform: translateY(0) scale(2);
+    }
+    
+    nav ul li span:nth-child(1) {
+      --n: 1;
+    }
+    
+    nav ul li span:nth-child(2) {
+      --n: 2;
+    }
+    
+    nav ul li span:nth-child(3) {
+      --n: 3;
+    }
+    
+    nav ul li span:nth-child(4) {
+      --n: 4;
+    }
+    
+    /* Media queries for mobile devices */
+    @media only screen and (max-width: 600px) {
+      h1 {
+        font-size: 20px;
+      }
+      
+      .description {
+        font-size: 14px;
+      }
+      
+      nav ul li {
+        width: 10em;
+        height: 2.5em;
+        font-size: 14px;
+      }
+    }
+  </style>
+  <script>
+    function redirectToUrl(url) {
+      setTimeout(function() {
+        window.location.href = url;
+      }, 500);
+    }
+  </script>
+</head>
+<body>
+  <h1>Contact Us</h1>
+  <p class="description">အခုပဲ ကစားဖို့ အောက်ပါ Viber နှင့် Telegram <br>တို့မှတဆင့်ဆက်သွယ်လိုက်ပါ</p>
+  <nav>
+    <ul>
+      <li onclick="redirectToUrl('https://example.com')"><span></span><span></span><span></span><span></span>telegram</li>
+      <li onclick="redirectToUrl('https://example1.com')"><span></span><span></span><span></span><span></span>viber</li>
+    </ul>
+  </nav>
+</body>
+</html>
